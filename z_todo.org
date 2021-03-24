@@ -1,0 +1,13 @@
+
+
+- ver como hacer el script
+- ver si hago una clase
+- ver si puedo arregral lo del tipo de character en pandoc
+- readme
+- directorio de github
+- loger generico
+- read links from md file
+- url cleaner
+- title of the document : ligarlo con el nombre del fichero
+- extract markdown
+- download images
