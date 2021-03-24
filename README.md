@@ -1,5 +1,5 @@
-<https://github.com/dmontaner/investopedia/actions/workflows/python-tox-default.yml/badge.svg>
-<https://github.com/dmontaner/investopedia/actions/workflows/python-tox-next.yml/badge.svg)>
+![](https://github.com/dmontaner/investopedia/actions/workflows/python-tox-default.yml/badge.svg)
+![](https://github.com/dmontaner/investopedia/actions/workflows/python-tox-next.yml/badge.svg)
 
 # investopedia
 
