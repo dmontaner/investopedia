@@ -1,4 +1,4 @@
-name: Test with Tox Next
+name: Pytest 3.9
 
 on:
   push:

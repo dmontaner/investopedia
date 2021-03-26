@@ -1,4 +1,4 @@
-name: Test with Tox Default
+name: Pytest 3.8
 
 on:
   push:
@@ -26,4 +26,4 @@ jobs:
           pip install tox
       - name: Run Tox
         # Run tox using the version of Python in `PATH`
-        run: tox -e flake8 -e coverage
+        run: tox -e coverage
