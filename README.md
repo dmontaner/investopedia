@@ -1,5 +1,7 @@
-![](https://github.com/dmontaner/investopedia/actions/workflows/python-tox-default.yml/badge.svg)
-![](https://github.com/dmontaner/investopedia/actions/workflows/python-tox-next.yml/badge.svg)
+[![](https://github.com/dmontaner/investopedia/actions/workflows/pytest-current.yml/badge.svg)](https://github.com/dmontaner/investopedia/actions/workflows/pytest-current.yml)
+[![](https://github.com/dmontaner/investopedia/actions/workflows/pytest-next.yml/badge.svg)](https://github.com/dmontaner/investopedia/actions/workflows/pytest-next.yml)
+[![](https://github.com/dmontaner/investopedia/actions/workflows/flake8.yml/badge.svg)](https://github.com/dmontaner/investopedia/actions/workflows/flake8.yml)
+
 
 # investopedia
 
