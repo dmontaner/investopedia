@@ -14,8 +14,10 @@ def _download_page(url):
     cont = soup.find('div', 'article-body')
 
     # remove videos
-    for video in cont.find_all('div', 'inline-video'):
-        video.extract()
+    [x.extract() for x in cont.find_all('div', 'inline-video')]
+
+    # remove math
+    [x.extract() for x in cont.find_all('span', 'katex-html')]
 
     return head, cont
 
