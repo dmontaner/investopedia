@@ -56,7 +56,7 @@ def convert_pdf(file, outfile=None):
         outfile = re.sub('\\.html$', '.pdf', file)
 
     # -f html+tex_math_dollars+tex_math_single_backslash -t latex
-    pandoc_command = f'pandoc -V fontsize=12pt -V geometry:"top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" --pdf-engine=xelatex --toc -o {outfile} {file}'
+    pandoc_command = f'pandoc -V fontsize=12pt -V geometry:"top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" --pdf-engine=xelatex --toc --toc-depth=2 -o {outfile} {file}'
 
     print(pandoc_command)
     subprocess.run(pandoc_command, shell=True)
