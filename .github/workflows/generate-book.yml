@@ -35,12 +35,10 @@ jobs:
         
     - name: Docker Pandoc
       run: |
-        echo My working dir:
-        pwd
-        echo Things here:
-        ls -l
-        echo Run padoc via Docker:
         docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex -V fontsize=12pt -V geometry:"top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" --pdf-engine=xelatex --toc --toc-depth=2 -o generated_investopedia_book.pdf generated_investopedia_book.html
-        echo After pandoc Things here:
         ls -l
-        echo DONE
+
+    - name: Commit PDF
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_message: saving PDF
