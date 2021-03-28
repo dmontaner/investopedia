@@ -15,15 +15,32 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+      with:
+        ref: ${{ github.head_ref }}
+
     - name: Set up Python 3.9
       uses: actions/setup-python@v2
       with:
         python-version: 3.9
+
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install .
+
     - name: Download pages
       run: |
         investopedia --no-pdf https://www.investopedia.com/terms/i/irr.asp -o generated_investopedia_book.html
         ls -l
+        
+    - name: Docker Pandoc
+      run: |
+        echo My working dir:
+        pwd
+        echo Things here:
+        ls -l
+        echo Run padoc via Docker:
+        docker run --rm --volume "`pwd`:/data" --user `id -u`:`id -g` pandoc/latex -V fontsize=12pt -V geometry:"top=1.5cm, bottom=1.5cm, left=1.5cm, right=1.5cm" --pdf-engine=xelatex --toc --toc-depth=2 -o generated_investopedia_book.pdf generated_investopedia_book.html
+        echo After pandoc Things here:
+        ls -l
+        echo DONE
